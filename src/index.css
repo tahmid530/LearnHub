@@ -1,0 +1,16 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+@theme {
+  /* Brand Colors */
+  --color-hub-indigo: #4F46E5;
+  --color-hub-violet: #7C3AED;
+  --color-hub-amber: #F59E0B;
+  --color-hub-ink: #0F172A;
+  --color-hub-surface: #F8FAFC;
+  --color-hub-emerald: #10B981;
+
+  /* Fonts */
+  --font-display: "Plus Jakarta Sans", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
