@@ -11,7 +11,7 @@ const featuredCourses = [
     badge: "Bestseller",
 
     thumbnail:
-      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop",
 
     instructor: {
       name: "John Anderson",
@@ -52,7 +52,7 @@ const featuredCourses = [
     badge: "Popular",
 
     thumbnail:
-      "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop",
 
     instructor: {
       name: "Sarah Wilson",
@@ -134,7 +134,7 @@ const featuredCourses = [
     badge: "Top Rated",
 
     thumbnail:
-      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1559028012-481c04fa702d?q=80&w=1200&auto=format&fit=crop",
 
     instructor: {
       name: "Michael Brown",
@@ -175,7 +175,7 @@ const featuredCourses = [
     badge: "Trending",
 
     thumbnail:
-      "https://images.unsplash.com/photo-1559028012-481c04fa702d?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop",
 
     instructor: {
       name: "Emma Johnson",
