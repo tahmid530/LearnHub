@@ -23,7 +23,7 @@ const stats = [
         suffix: "+",
         title: "Premium Courses",
         description:
-            "Industry-focused courses designed to build practical skills.",
+            "Industry-focused courses to build practical skills.",
     },
     {
         id: 2,
@@ -32,7 +32,7 @@ const stats = [
         suffix: "+",
         title: "Active Students",
         description:
-            "Learners growing their careers every single day.",
+            "Learners growing their careers every single day confidently.",
     },
     {
         id: 3,
@@ -41,7 +41,7 @@ const stats = [
         suffix: "+",
         title: "Certificates Issued",
         description:
-            "Students successfully completed professional courses.",
+            "Students completed courses successfully.",
     },
     {
         id: 4,
@@ -50,7 +50,7 @@ const stats = [
         suffix: "%",
         title: "Success Rate",
         description:
-            "Students who completed their learning journey.",
+            "Students who completed their learning journey with us.",
     },
 ];
 

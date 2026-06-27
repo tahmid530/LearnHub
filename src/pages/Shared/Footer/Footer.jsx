@@ -8,6 +8,7 @@ import {
   FaPhoneAlt,
   FaMapMarkerAlt,
 } from "react-icons/fa";
+import Logo from "../Logo/Logo";
 
 const quickLinks = [
   "Home",
@@ -43,12 +44,7 @@ const Footer = () => {
 
           <div>
 
-            <h2 className="text-3xl font-bold">
-              Learn
-              <span className="text-indigo-400">
-                Hub
-              </span>
-            </h2>
+            <Logo showTagline={false} />
 
             <p className="mt-6 leading-7 text-slate-400">
               LearnHub is a modern learning platform that helps
