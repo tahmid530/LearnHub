@@ -1,262 +1,166 @@
+import { Link } from "react-router";
+import {
+  GraduationCap
+} from "lucide-react";
+
 import {
   FaFacebookF,
   FaGithub,
-  FaInstagram,
   FaLinkedinIn,
-  FaYoutube,
-  FaEnvelope,
-  FaPhoneAlt,
-  FaMapMarkerAlt,
-} from "react-icons/fa";
-import Logo from "../Logo/Logo";
+  FaInstagram,
+} from "react-icons/fa6";
 
-const quickLinks = [
-  "Home",
-  "Courses",
-  "About",
-  "Contact",
-  "FAQ",
-];
+import Container from "../../../components/ui/Container";
+import footerLinks from "../../../data/footerLinks";
 
-const studentLinks = [
-  "Dashboard",
-  "My Courses",
-  "Progress",
-  "Certificates",
-  "Quiz",
-];
+import FooterColumn from "./FooterColumn";
+import Newsletter from "./Newsletter";
 
-const Footer = () => {
+export default function Footer() {
   return (
-    <footer className="relative overflow-hidden bg-[#020617] text-white">
+    <footer className="relative overflow-hidden border-t border-white/10 bg-[#08101F]">
 
       {/* Background Glow */}
 
-      <div className="absolute -left-40 top-0 h-80 w-80 rounded-full bg-indigo-600/10 blur-[120px]" />
+      <div className="absolute -left-40 top-0 h-80 w-80 rounded-full bg-indigo-600/10 blur-[140px]" />
 
-      <div className="absolute -right-40 bottom-0 h-80 w-80 rounded-full bg-cyan-500/10 blur-[120px]" />
+      <div className="absolute -right-40 bottom-0 h-80 w-80 rounded-full bg-cyan-500/10 blur-[140px]" />
 
-      <div className="relative mx-auto max-w-7xl px-6 py-20 lg:px-8">
+      <Container>
 
-        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-16 py-20 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
 
           {/* Brand */}
 
           <div>
 
-            <Logo showTagline={false} />
+            <Link
+              to="/"
+              className="flex items-center gap-3"
+            >
 
-            <p className="mt-6 leading-7 text-slate-400">
-              LearnHub is a modern learning platform that helps
-              students master real-world skills through premium
-              courses, practical projects and expert mentorship.
+              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-indigo-600 to-violet-600">
+
+                <GraduationCap
+                  size={24}
+                  className="text-white"
+                />
+
+              </div>
+
+              <div>
+
+                <h2 className="text-2xl font-bold text-white">
+
+                  LearnHub
+
+                </h2>
+
+                <p className="text-sm text-slate-400">
+
+                  Learn Without Limits
+
+                </p>
+
+              </div>
+
+            </Link>
+
+            <p className="mt-8 max-w-sm leading-8 text-slate-400">
+
+              LearnHub helps students master modern technologies through
+              industry-focused courses, practical projects, and expert
+              instructors.
+
             </p>
+
+            {/* Social */}
 
             <div className="mt-8 flex gap-4">
 
               {[
                 FaFacebookF,
-                FaInstagram,
-                FaLinkedinIn,
                 FaGithub,
-                FaYoutube,
+                FaLinkedinIn,
+                FaInstagram,
               ].map((Icon, index) => (
+
                 <a
                   key={index}
                   href="#"
-                  className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-slate-300 transition-all duration-300 hover:-translate-y-1 hover:border-indigo-500 hover:bg-indigo-600 hover:text-white"
+                  className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-slate-300 transition-all duration-300 hover:border-indigo-500 hover:bg-indigo-600 hover:text-white"
                 >
-                  <Icon />
+
+                  <Icon size={18} />
+
                 </a>
+
               ))}
 
             </div>
 
           </div>
 
-          {/* Quick Links */}
+          {/* Footer Columns */}
 
-          <div>
+          <FooterColumn
+            title="Quick Links"
+            links={footerLinks.quickLinks}
+          />
 
-            <h3 className="mb-6 text-xl font-semibold">
-              Quick Links
-            </h3>
+          {/* // <FooterColumn
+          //   title="Courses"
+          //   links={footerLinks.courses}
+          // /> */}
 
-            <ul className="space-y-4">
+          {/* <FooterColumn
+            title="Company"
+            links={footerLinks.company}
+          /> */}
 
-              {quickLinks.map((item) => (
+          <FooterColumn
+            title="Support"
+            links={footerLinks.support}
+          />
 
-                <li key={item}>
+          {/* Newsletter */}
 
-                  <a
-                    href="#"
-                    className="text-slate-400 transition hover:text-indigo-400"
-                  >
-                    {item}
-                  </a>
-
-                </li>
-
-              ))}
-
-            </ul>
-
-          </div>
-
-          {/* Student */}
-
-          <div>
-
-            <h3 className="mb-6 text-xl font-semibold">
-              Student
-            </h3>
-
-            <ul className="space-y-4">
-
-              {studentLinks.map((item) => (
-
-                <li key={item}>
-
-                  <a
-                    href="#"
-                    className="text-slate-400 transition hover:text-indigo-400"
-                  >
-                    {item}
-                  </a>
-
-                </li>
-
-              ))}
-
-            </ul>
-
-          </div>
-
-          {/* Contact */}
-
-          <div>
-
-            <h3 className="mb-6 text-xl font-semibold">
-              Contact
-            </h3>
-
-            <div className="space-y-5">
-
-              <div className="flex gap-4">
-
-                <FaMapMarkerAlt
-                  className="mt-1 text-indigo-400"
-                />
-
-                <p className="text-slate-400">
-                  Dhaka, Bangladesh
-                </p>
-
-              </div>
-
-              <div className="flex gap-4">
-
-                <FaEnvelope
-                  className="mt-1 text-indigo-400"
-                />
-
-                <p className="text-slate-400">
-                  support@learnhub.com
-                </p>
-
-              </div>
-
-              <div className="flex gap-4">
-
-                <FaPhoneAlt
-                  className="mt-1 text-indigo-400"
-                />
-
-                <p className="text-slate-400">
-                  +880 17XX XXX XXX
-                </p>
-
-              </div>
-
-            </div>
-
-            {/* Newsletter */}
-
-            <div className="mt-8">
-
-              <h4 className="mb-3 font-semibold">
-                Newsletter
-              </h4>
-
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-white outline-none placeholder:text-slate-500 focus:border-indigo-500"
-              />
-
-              <button
-                className="mt-4 w-full rounded-xl bg-indigo-600 px-5 py-3 font-semibold transition duration-300 hover:bg-indigo-500"
-              >
-                Subscribe
-              </button>
-
-            </div>
-
-          </div>
+          <Newsletter />
 
         </div>
 
         {/* Bottom */}
 
-        <div className="mt-16 border-t border-white/10 pt-8">
+        <div className="flex flex-col items-center justify-between gap-4 border-t border-white/10 py-8 text-center text-sm text-slate-500 md:flex-row">
 
-          <div className="flex flex-col items-center justify-between gap-5 text-center text-sm text-slate-400 md:flex-row">
+          <p>
 
-            <p>
-              © {new Date().getFullYear()} LearnHub.
-              All rights reserved.
-            </p>
+            © {new Date().getFullYear()} LearnHub. All rights reserved.
 
-            <div className="flex flex-wrap justify-center gap-6">
+          </p>
 
-              <a
-                href="#"
-                className="transition hover:text-indigo-400"
-              >
-                Privacy Policy
-              </a>
+          <div className="flex gap-6">
 
-              <a
-                href="#"
-                className="transition hover:text-indigo-400"
-              >
-                Terms of Service
-              </a>
+            <Link
+              to="/privacy-policy"
+              className="transition hover:text-indigo-400"
+            >
+              Privacy Policy
+            </Link>
 
-              <a
-                href="#"
-                className="transition hover:text-indigo-400"
-              >
-                Cookies
-              </a>
-
-              <a
-                href="#"
-                className="transition hover:text-indigo-400"
-              >
-                Sitemap
-              </a>
-
-            </div>
+            <Link
+              to="/terms"
+              className="transition hover:text-indigo-400"
+            >
+              Terms of Service
+            </Link>
 
           </div>
 
         </div>
 
-      </div>
+      </Container>
 
     </footer>
   );
-};
-
-export default Footer;
+}
